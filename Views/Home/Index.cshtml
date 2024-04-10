@@ -1,0 +1,59 @@
+﻿@model IEnumerable<PH34686_THICS4.Models.Ca>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ten)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tuoi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NoiSong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ID_DongVat)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ten)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tuoi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoiSong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID_DongVat)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.ID  }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

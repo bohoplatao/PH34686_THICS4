@@ -1,0 +1,53 @@
+﻿@model PH34686_THICS4.Models.Ca
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Ca</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ID" class="control-label"></label>
+                <input asp-for="ID" class="form-control" />
+                <span asp-validation-for="ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ten" class="control-label"></label>
+                <input asp-for="Ten" class="form-control" />
+                <span asp-validation-for="Ten" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tuoi" class="control-label"></label>
+                <input asp-for="Tuoi" class="form-control" />
+                <span asp-validation-for="Tuoi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NoiSong" class="control-label"></label>
+                <input asp-for="NoiSong" class="form-control" />
+                <span asp-validation-for="NoiSong" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ID_DongVat" class="control-label"></label>
+                <input asp-for="ID_DongVat" class="form-control" />
+                <span asp-validation-for="ID_DongVat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
